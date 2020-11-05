@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProfileController!{% endblock %}
+
+{% block body %}
+<div class="col-10 p-5">
+
+    <h2>Utilisateur : {{ app.user.username }}</h2>
+
+    <table class="table table-bordered table-sm text-center">
+        <thead>
+            <tr>
+                <th scope="col">Email</th>
+                <th scope="col">Role</th>
+                <th scope="col">Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ app.user.email }}</td>
+                <td>{{ app.user.roles|join(' + ')|lower }}</td>
+                <td> ****** </td>
+                <td>
+                    <a href="#">
+
+                    </a>
+                    -
+                    <a href="#">
+
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    {% if is_granted('ROLE_ADMIN') %}
+    <a href="{{ path('admin') }}" class="btn btn-primary">ADMIN</a>
+    {% endif %}
+
+    <a href="{{ path('app_logout') }}" class="btn btn-danger float-right">Se déconnecter</a>
+
+</div>
+
+{% if is_granted('ROLE_PRO') %}
+<div class="col-10 p-5">
+
+    <h1>Liste des prestations :</h1>
+
+    <table class="table table-bordered table-sm text-center">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for prestation in prestations %}
+            <tr>
+                <td>{{ prestation.id }}</td>
+                <td>{{ prestation.name }}</td>
+                <td>{{ prestation.description }}</td>
+                <td>{{ prestation.prix }} €</td>
+                <td>
+                    <a href="{{ path('prestations_show', {'id': prestation.id}) }}" class="btn btn-primary">Voir</a>
+                    <a href="{{ path('prestations_edit', {'id': prestation.id}) }}" class="btn btn-warning">Editer</a>
+                </td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('prestations_new') }}" class="btn btn-success float-right">Ajouter prestation</a>
+
+</div>
+{% endif %}
+
+{% endblock %}

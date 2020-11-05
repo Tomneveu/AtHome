@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Prestations{% endblock %}
+
+{% block body %}
+<div class="col-8 p-5">
+
+    <h1>Create new Prestations</h1>
+
+    {{ include('prestations/_form.html.twig') }}
+
+    <a href="{{ path('profile') }}" class="btn btn-info">Back to profile</a>
+
+</div>
+{% endblock %}
