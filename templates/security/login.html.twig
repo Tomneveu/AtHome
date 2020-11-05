@@ -3,27 +3,20 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-
-<div class="container">
+<div class="w3-container w3-content">
     <div class="row">
-        <div class="col-md-6 offset-md-3">
+        <div class="col-sm-6 offset-sm-3">
 
             <form method="post">
                 {% if error %}
                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
 
-                {% if app.user %}
-                <div class="mb-3">
-                    You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
-                </div>
-                {% endif %}
-
-                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                <h3 class="mb-3 font-weight-normal">Please sign in</h3>
                 <label for="inputEmail">Email</label>
                 <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control"
                     required autofocus>
-
+                <br>
                 <label for="inputPassword">Password</label>
                 <input type="password" name="password" id="inputPassword" class="form-control" required>
                 <!-- An element to toggle between password visibility -->
@@ -37,15 +30,14 @@
                     </label>
                 </div>
 
-                <div class="row h-100">
-                    <div class="col-sm-6 my-auto">
-                        <button class="btn btn-lg btn-primary" type="submit">Sign in</button>
+                <div class="row">
+                    <div class="col-6 p-3 my-auto">
+                        <button type="submit" class="btn btn-lg btn-primary">Sign in</button>
                     </div>
-                    <div class="col-sm-6 my-auto">
-                        Pas encore inscrit ?
-                        <a class="btn btn-lg btn-info" href="{{ path('app_register') }}">
-                            Register
-                        </a>
+
+                    <div class="col-6 p-3 my-auto">
+                        Pas inscrit ?  
+                        <a class="btn btn-lg btn-info" href="{{ path('app_register') }}">Register</a>
                     </div>
                 </div>
 
@@ -54,5 +46,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}

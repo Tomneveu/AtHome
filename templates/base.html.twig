@@ -15,7 +15,7 @@
     {% block stylesheets %}{% endblock %}
 </head>
 
-<body class="">
+<body>
 
     <!-- Scroll to top btn -->
     <button onclick="topFunction()" id="myBtn" title="Go to top" type="button" class="btn btn-default">
@@ -32,7 +32,10 @@
             <a href="{{ path('home') }}" class="w3-bar-item w3-xlarge"><b>
                     <i class="fa fa-map-marker w3-margin-right"></i>AtHome</b></a>
 
-            <a href="{{ path('profile') }}" class="w3-bar-item w3-xlarge w3-right">
+            <a href="{{ path('profile') }}" class="w3-bar-item w3-large w3-right">
+                {% if app.user %}
+                {{ app.user.username }}
+                {% endif %}
             <img src="{{ asset('img/icons8-customer-40.png') }}" class="w3-hover-opacity"></a>
         </div>
     </div>

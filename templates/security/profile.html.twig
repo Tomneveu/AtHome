@@ -3,9 +3,9 @@
 {% block title %}Hello ProfileController!{% endblock %}
 
 {% block body %}
-<div class="col-10 p-5">
+<div class="col-11 p-5">
 
-    <h2>Utilisateur : {{ app.user.username }}</h2>
+    <h2>Utilisateur : </h2>
 
     <table class="table table-bordered table-sm text-center">
         <thead>
@@ -42,9 +42,9 @@
 </div>
 
 {% if is_granted('ROLE_PRO') %}
-<div class="col-10 p-5">
+<div class="col-11 p-5">
 
-    <h1>Liste des prestations :</h1>
+    <h2>Liste des prestations :</h2>
 
     <table class="table table-bordered table-sm text-center">
         <thead>

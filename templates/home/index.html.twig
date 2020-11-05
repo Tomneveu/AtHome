@@ -3,43 +3,23 @@
 {% block title %}At Home!{% endblock %}
 
 {% block body %}
-
-<div class="w3-auto w3-center w3-content">
+<div class="w3-container w3-center w3-content">
 
     <div class="row">
         <div class="col">
-            <p>Massage</p>
-            <img src="{{ asset('img/icons8-massage-80.png') }}" class="w3-image w3-hover-opacity">
-            <!--PRESTA LIST-->
-            <ul class="list-group">
-                {% for presta in massage %}
-                <li class="list-group-item">{{ presta.name }}, {{ presta.prix }} € | {{ presta.description }}
-                </li>
-                {% endfor %}
-            </ul>
-            <!--END PRESTA LIST-->
+            <h4>Massage</h4>
+            <a href="{{ path('massage') }}"><img src="{{ asset('img/icons8-massage-80.png') }}" class="w3-image w3-hover-opacity"></a>
+
         </div>
         <div class="col">
-            <p>Beauté</p>
-            <img src="{{ asset('img/icons8-lipstick-80.png') }}" class="w3-image w3-hover-opacity">
-            <!--PRESTA LIST-->
-            <ul class="list-group">
-                {% for presta in beaute %}
-                <li class="list-group-item">{{ presta.name }}, {{ presta.prix }} € | {{ presta.description }}</li>
-                {% endfor %}
-            </ul>
-            <!--END PRESTA LIST-->
+            <h4>Beauté</h4>
+            <a href="{{ path('beaute') }}"><img src="{{ asset('img/icons8-lipstick-80.png') }}" class="w3-image w3-hover-opacity"></a>
+
         </div>
         <div class="col">
-            <p>Coiffure</p>
-            <img src="{{ asset('img/icons8-barbershop-80.png') }}" class="w3-image w3-hover-opacity">
-            <!--PRESTA LIST-->
-            <ul class="list-group">
-                {% for presta in coiffure %}
-                <li class="list-group-item">{{ presta.name }}, {{ presta.prix }} € | {{ presta.description }}</li>
-                {% endfor %}
-            </ul>
-            <!--END PRESTA LIST-->
+            <h4>Coiffure</h4>
+            <a href="{{ path('coiffure') }}"><img src="{{ asset('img/icons8-barbershop-80.png') }}" class="w3-image w3-hover-opacity"></a>
+
         </div>
     </div>
 
@@ -47,18 +27,17 @@
         <div class="col">
             <a href="{{ path('app_register') }}"><img src="{{ asset('img/icons8-customer-80.png') }}"
                     class="w3-image w3-hover-opacity"></a>
-            <p>Rejoignez-nous</p>
+            <h4>Rejoignez-nous</h4>
         </div>
         <div class="col">
             <img src="{{ asset('img/icons8-technical-support-80.png') }}" class="w3-image w3-hover-opacity">
-            <p>Contactez-nous</p>
+            <h4>Contactez-nous</h4>
         </div>
         <div class="col">
             <img src="{{ asset('img/icons8-maintenance-80.png') }}" class="w3-image w3-hover-opacity">
-            <p>Support</p>
+            <h4>Support</h4>
         </div>
     </div>
 
 </div>
-
 {% endblock %}
