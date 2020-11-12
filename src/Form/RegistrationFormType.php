@@ -27,6 +27,8 @@ class RegistrationFormType extends AbstractType
                 'choices'  => [
                     'Client' => 'ROLE_USER',
                     'Prestataire' => 'ROLE_PRO',
+                    'visiteur' => 'ROLE_USER',
+                    'Admin' => 'ROLE_ADMIN',
                 ],
             ])
             ->add('email', EmailType::class)

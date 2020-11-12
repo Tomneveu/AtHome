@@ -22,41 +22,44 @@ class HomeController extends AbstractController
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        $massage = $prestationsRepository->findByName('massage');
-        $beaute = $prestationsRepository->findByName('beauté');
+        $soins = $prestationsRepository->findByName('soins');
+        $esthétique = $prestationsRepository->findByName('esthétique');
         $coiffure = $prestationsRepository->findByName('coiffure');
+        $réseaux = $prestationsRepository->findByName('réseaux');
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
-            'massage' => $massage,
-            'beaute' => $beaute,
+            'soins' => $soins,
+            'esthétique' => $esthétique,
             'coiffure' => $coiffure,
+            'réseaux' => $réseaux,
+            
         ]);
     }
 
     /**
-     * @Route("/massage", name="massage")
+     * @Route("/soins", name="soins")
      */
-    public function massage(PrestationsRepository $prestationsRepository): Response
+    public function soins(PrestationsRepository $prestationsRepository): Response
     {
-        $massage = $prestationsRepository->findByName('massage');
+        $soins = $prestationsRepository->findByName('soins');
 
-        return $this->render('home/massage.html.twig', [
+        return $this->render('home/soins.html.twig', [
             'controller_name' => 'HomeController',
-            'massage' => $massage,
+            'soins' => $soins,
         ]);
     }
 
     /**
-     * @Route("/beaute", name="beaute")
+     * @Route("/esthétique", name="esthétique")
      */
-    public function beaute(PrestationsRepository $prestationsRepository): Response
+    public function esthétique(PrestationsRepository $prestationsRepository): Response
     {
-        $beaute = $prestationsRepository->findByName('beauté');
+        $esthétique = $prestationsRepository->findByName('esthétique');
 
-        return $this->render('home/beaute.html.twig', [
+        return $this->render('home/esthétique.html.twig', [
             'controller_name' => 'HomeController',
-            'beaute' => $beaute,
+            'esthétique' => $esthétique,
         ]);
     }
 

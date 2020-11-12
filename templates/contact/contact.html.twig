@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}contact{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+
+    <div clas="row p-5 bg-light">
+            <div class="col-12 text-center">
+            <a href="{{ path('contact') }}"><img src="{{ asset('img/icons8-support-en-ligne-100.png') }}" 
+                    class="w3-image w3-hover-opacity">
+            <h4>Contactez-nous</h4>
+            </div>
+        </div>
+        <div class="row p-5">
+            <div class="col-4 offset-4">
+                {{ form_start(formulaireDeContact) }}
+                {{ form_end(formulaireDeContact) }}
+            </div>
+            <div class="col-12 text-center">
+            <h1>Appelez-nous</h1>
+                <h2 class="fas fa-phone-volume"> (+33) 000 0000 000</h2>
+        </div>
+    </div>
+        <div class="col-12 text-center">
+          <h2>Service clientèle disponible 7j/7
+          24h/24</h2>
+
+
+{% endblock %}

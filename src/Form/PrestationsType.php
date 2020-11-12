@@ -26,8 +26,8 @@ class PrestationsType extends AbstractType
                 'multiple' => false,
                 'expanded' => false,
                     'choices'  => [
-                        'Massage' => 'Massage',
-                        'Beauté' => 'Beauté',
+                        'Soins' => 'Soins',
+                        'Esthétique' => 'Esthétique',
                         'Coiffure' => 'Coiffure',
                 ],
             ])

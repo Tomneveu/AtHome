@@ -34,7 +34,8 @@
     </table>
 
     {% if is_granted('ROLE_ADMIN') %}
-    <a href="{{ path('admin') }}" class="btn btn-primary">ADMIN</a>
+    <a href="{{ path('Admin') }}" class="btn btn-primary">Espace Admin</a>
+    <a href="{{ path('profile') }}" class="btn btn-success float-right">Ajouter utilisateur</a>
     {% endif %}
 
     <a href="{{ path('app_logout') }}" class="btn btn-danger float-right">Se déconnecter</a>

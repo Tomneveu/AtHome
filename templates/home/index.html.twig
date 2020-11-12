@@ -3,40 +3,42 @@
 {% block title %}At Home!{% endblock %}
 
 {% block body %}
-<div class="w3-container w3-center w3-content">
+<div class="w3-auto w3-center w3-khaki">
 
     <div class="row">
         <div class="col">
-            <h4>Massage</h4>
-            <a href="{{ path('massage') }}"><img src="{{ asset('img/icons8-massage-80.png') }}" class="w3-image w3-hover-opacity"></a>
+            <h4>Soins</h4>
+            <a href="{{ path('soins') }}"><img src="{{ asset('img/icons8-massage-80.png') }}" class="w3-image w3-hover-opacity"></a>
 
         </div>
         <div class="col">
-            <h4>Beauté</h4>
-            <a href="{{ path('beaute') }}"><img src="{{ asset('img/icons8-lipstick-80.png') }}" class="w3-image w3-hover-opacity"></a>
+            <h4>Esthétique</h4>
+            <a href="{{ path('esthétique') }}"><img src="{{ asset('img/icons8-esthetique-100.png') }}" class="w3-image w3-hover-opacity"></a>
 
         </div>
         <div class="col">
             <h4>Coiffure</h4>
-            <a href="{{ path('coiffure') }}"><img src="{{ asset('img/icons8-barbershop-80.png') }}" class="w3-image w3-hover-opacity"></a>
+            <a href="{{ path('coiffure') }}"><img src="{{ asset('img/icons8-coiffure-100.png') }}" class="w3-image w3-hover-opacity"></a>
 
         </div>
     </div>
 
     <div class="row">
         <div class="col">
-            <a href="{{ path('app_register') }}"><img src="{{ asset('img/icons8-customer-80.png') }}"
+            <a href="{{ path('app_register') }}"><img src="{{ asset('img/icons8-utilisateur-100.png') }}"
                     class="w3-image w3-hover-opacity"></a>
-            <h4>Rejoignez-nous</h4>
+            <h4>Mon compte</h4>
         </div>
         <div class="col">
-            <img src="{{ asset('img/icons8-technical-support-80.png') }}" class="w3-image w3-hover-opacity">
+            <a href="{{ path('contact') }}"><img src="{{ asset('img/icons8-support-en-ligne-100.png') }}" 
+                    class="w3-image w3-hover-opacity">
             <h4>Contactez-nous</h4>
         </div>
         <div class="col">
-            <img src="{{ asset('img/icons8-maintenance-80.png') }}" class="w3-image w3-hover-opacity">
-            <h4>Support</h4>
+            <img src="{{ asset('img/icons8-support-100.png') }}" class="w3-image w3-hover-opacity">
+            <h4>Parametres</h4>
         </div>
+        
     </div>
 
 </div>
