@@ -49,8 +49,7 @@
     <table class="table table-bordered table-sm text-center">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Nom</th>
+                <th>Catégorie</th>
                 <th>Description</th>
                 <th>Prix</th>
                 <th>Actions</th>
@@ -59,7 +58,6 @@
         <tbody>
             {% for prestation in prestations %}
             <tr>
-                <td>{{ prestation.id }}</td>
                 <td>{{ prestation.name }}</td>
                 <td>{{ prestation.description }}</td>
                 <td>{{ prestation.prix }} €</td>

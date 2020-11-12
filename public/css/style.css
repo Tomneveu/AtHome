@@ -27,7 +27,7 @@ a:hover{
 
 body {
     height: 100%;
-    background-color: rgb(218, 204, 187);
+    background-color: #ffd600;
 }
 
 body,h1,h2,h3,h4,h5,h6 {
@@ -40,7 +40,7 @@ body,h1,h2,h3,h4,h5,h6 {
 }
 
 .list-group-item{
-    background-color: rgba(245, 245, 245, 0.5);
+    background-color: #ffd50080;
 }
 
 .list-group{
@@ -48,7 +48,7 @@ body,h1,h2,h3,h4,h5,h6 {
 }
 
 .table {
-    background-color: rgba(245, 245, 245, 0.5);
+    background-color: #ffd50080;
 }
 
 .selector-for-some-widget {

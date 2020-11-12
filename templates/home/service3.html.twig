@@ -15,8 +15,8 @@
             <img src="{{ asset('img/icons8-barbershop-80.png') }}" class="w3-image w3-hover-opacity">
             <!--PRESTA LIST-->
             <ul class="list-group">
-                {% for presta in coiffure %}
-                <li class="list-group-item">{{ presta.name }}, {{ presta.prix }} € | {{ presta.description }}
+                {% for presta in service3 %}
+                <li class="list-group-item">{{ presta.prestataire.username }}, {{ presta.prix }} € | {{ presta.description }}
                 <a href="{{ path('search_show', {'id': presta.id}) }}" class="btn btn-primary float-right">Voir</a>
                 </li>
                 {% endfor %}

@@ -11,12 +11,12 @@
         </div>
 
         <div class="col">
-            <h4>Beauté</h4>
+            <h4>Esthétique</h4>
             <img src="{{ asset('img/icons8-lipstick-80.png') }}" class="w3-image">
             <!--PRESTA LIST-->
             <ul class="list-group">
-                {% for presta in beaute %}
-                <li class="list-group-item">{{ presta.name }}, {{ presta.prix }} € | {{ presta.description }}
+                {% for presta in service2 %}
+                <li class="list-group-item">{{ presta.prestataire.username }}, {{ presta.prix }} € | {{ presta.description }}
                 <a href="{{ path('search_show', {'id': presta.id}) }}" class="btn btn-primary float-right">Voir</a>
                 </li>
                 {% endfor %}
