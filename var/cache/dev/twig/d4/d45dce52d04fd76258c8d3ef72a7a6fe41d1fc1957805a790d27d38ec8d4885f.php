@@ -120,77 +120,30 @@ class __TwigTemplate_0fa030ef8316c8f6dce80c57548b3c23376b14a362f9712dd9186ad5cf8
             </tr>
         </tbody>
     </table>
-    ";
-        // line 35
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 36
-            echo "                            <li>
-                                <a href=\"";
-            // line 37
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_users");
-            echo "\">
-                                    <svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-person\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
-                                        <path fill-rule=\"evenodd\" d=\"M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z\"/>
-                                    </svg>
-                                    - Utilisateurs
-                                </a>
-                            </li>
-                           
-                            <div class=\"dropdown-divider\"></div>
-                            <li>
-                                <a href=\"";
-            // line 47
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
-            echo "\">
-                                    <svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-x-square\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
-                                        <path fill-rule=\"evenodd\" d=\"M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z\"/>
-                                        <path fill-rule=\"evenodd\" d=\"M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z\"/>
-                                    </svg>
-                                     - Quitter
-                                </a>
-                            </li>
-                            <div class=\"dropdown-divider\"></div>
-                            <li>
-                                <a href=\"";
-            // line 57
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-            echo "\">
-                                    <svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-person\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
-                                        <path fill-rule=\"evenodd\" d=\"M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z\"/>
-                                    </svg>
-                                    - Changer
-                                </a>
-                            </li>
-                            <li>
-                                <a href=\"";
-            // line 65
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\">
-                                    <svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-person-x\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
-                                        <path fill-rule=\"evenodd\" d=\"M8 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10zm1.146-7.85a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z\"/>
-                                    </svg>
-                                    - D&eacute;connexion
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
 
+    ";
+        // line 36
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 37
+            echo "    <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
+            echo "\" class=\"btn btn-primary\">ADMIN</a>
     
     ";
         }
-        // line 77
+        // line 40
         echo "
     <a href=\"";
-        // line 78
+        // line 41
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo "\" class=\"btn btn-danger float-right\">Se déconnecter</a>
 
 </div>
 
 ";
-        // line 82
+        // line 45
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_PRO")) {
-            // line 83
+            // line 46
             echo "<div class=\"col-11 p-5\">
 
     <h2>Liste des prestations :</h2>
@@ -206,33 +159,33 @@ class __TwigTemplate_0fa030ef8316c8f6dce80c57548b3c23376b14a362f9712dd9186ad5cf8
         </thead>
         <tbody>
             ";
-            // line 97
+            // line 60
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["prestations"]) || array_key_exists("prestations", $context) ? $context["prestations"] : (function () { throw new RuntimeError('Variable "prestations" does not exist.', 97, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["prestations"]) || array_key_exists("prestations", $context) ? $context["prestations"] : (function () { throw new RuntimeError('Variable "prestations" does not exist.', 60, $this->source); })()));
             $context['_iterated'] = false;
             foreach ($context['_seq'] as $context["_key"] => $context["prestation"]) {
-                // line 98
+                // line 61
                 echo "            <tr>
                 <td>";
-                // line 99
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prestation"], "name", [], "any", false, false, false, 99), "html", null, true);
+                // line 62
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prestation"], "name", [], "any", false, false, false, 62), "html", null, true);
                 echo "</td>
                 <td>";
-                // line 100
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prestation"], "description", [], "any", false, false, false, 100), "html", null, true);
+                // line 63
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prestation"], "description", [], "any", false, false, false, 63), "html", null, true);
                 echo "</td>
                 <td>";
-                // line 101
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prestation"], "prix", [], "any", false, false, false, 101), "html", null, true);
+                // line 64
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prestation"], "prix", [], "any", false, false, false, 64), "html", null, true);
                 echo " €</td>
                 <td>
                     <a href=\"";
-                // line 103
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("prestations_show", ["id" => twig_get_attribute($this->env, $this->source, $context["prestation"], "id", [], "any", false, false, false, 103)]), "html", null, true);
+                // line 66
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("prestations_show", ["id" => twig_get_attribute($this->env, $this->source, $context["prestation"], "id", [], "any", false, false, false, 66)]), "html", null, true);
                 echo "\" class=\"btn btn-primary\">Voir</a>
                     <a href=\"";
-                // line 104
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("prestations_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["prestation"], "id", [], "any", false, false, false, 104)]), "html", null, true);
+                // line 67
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("prestations_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["prestation"], "id", [], "any", false, false, false, 67)]), "html", null, true);
                 echo "\" class=\"btn btn-warning\">Editer</a>
                 </td>
             </tr>
@@ -240,7 +193,7 @@ class __TwigTemplate_0fa030ef8316c8f6dce80c57548b3c23376b14a362f9712dd9186ad5cf8
                 $context['_iterated'] = true;
             }
             if (!$context['_iterated']) {
-                // line 108
+                // line 71
                 echo "            <tr>
                 <td colspan=\"5\">no records found</td>
             </tr>
@@ -249,19 +202,19 @@ class __TwigTemplate_0fa030ef8316c8f6dce80c57548b3c23376b14a362f9712dd9186ad5cf8
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['prestation'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 112
+            // line 75
             echo "        </tbody>
     </table>
 
     <a href=\"";
-            // line 115
+            // line 78
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("prestations_new");
             echo "\" class=\"btn btn-success float-right\">Ajouter prestation</a>
 
 </div>
 ";
         }
-        // line 119
+        // line 82
         echo "
 ";
         
@@ -284,7 +237,7 @@ class __TwigTemplate_0fa030ef8316c8f6dce80c57548b3c23376b14a362f9712dd9186ad5cf8
 
     public function getDebugInfo()
     {
-        return array (  265 => 119,  258 => 115,  253 => 112,  244 => 108,  235 => 104,  231 => 103,  226 => 101,  222 => 100,  218 => 99,  215 => 98,  210 => 97,  194 => 83,  192 => 82,  185 => 78,  182 => 77,  167 => 65,  156 => 57,  143 => 47,  130 => 37,  127 => 36,  125 => 35,  108 => 21,  104 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  218 => 82,  211 => 78,  206 => 75,  197 => 71,  188 => 67,  184 => 66,  179 => 64,  175 => 63,  171 => 62,  168 => 61,  163 => 60,  147 => 46,  145 => 45,  138 => 41,  135 => 40,  128 => 37,  126 => 36,  108 => 21,  104 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -323,46 +276,9 @@ class __TwigTemplate_0fa030ef8316c8f6dce80c57548b3c23376b14a362f9712dd9186ad5cf8
             </tr>
         </tbody>
     </table>
-    {% if is_granted('ROLE_ADMIN') %}
-                            <li>
-                                <a href=\"{{ path('admin_users') }}\">
-                                    <svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-person\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
-                                        <path fill-rule=\"evenodd\" d=\"M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z\"/>
-                                    </svg>
-                                    - Utilisateurs
-                                </a>
-                            </li>
-                           
-                            <div class=\"dropdown-divider\"></div>
-                            <li>
-                                <a href=\"{{ path('home') }}\">
-                                    <svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-x-square\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
-                                        <path fill-rule=\"evenodd\" d=\"M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z\"/>
-                                        <path fill-rule=\"evenodd\" d=\"M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z\"/>
-                                    </svg>
-                                     - Quitter
-                                </a>
-                            </li>
-                            <div class=\"dropdown-divider\"></div>
-                            <li>
-                                <a href=\"{{ path('app_login') }}\">
-                                    <svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-person\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
-                                        <path fill-rule=\"evenodd\" d=\"M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z\"/>
-                                    </svg>
-                                    - Changer
-                                </a>
-                            </li>
-                            <li>
-                                <a href=\"{{ path('app_logout') }}\">
-                                    <svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-person-x\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
-                                        <path fill-rule=\"evenodd\" d=\"M8 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10zm1.146-7.85a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z\"/>
-                                    </svg>
-                                    - D&eacute;connexion
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
 
+    {% if is_granted('ROLE_ADMIN') %}
+    <a href=\"{{ path('admin') }}\" class=\"btn btn-primary\">ADMIN</a>
     
     {% endif %}
 
