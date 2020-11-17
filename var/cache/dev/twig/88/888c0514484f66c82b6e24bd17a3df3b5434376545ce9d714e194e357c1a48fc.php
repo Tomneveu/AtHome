@@ -65,7 +65,7 @@ class __TwigTemplate_5e5924a7380e5a878c5b7da8cb574298bb7bf14eb530e1db566b0d77ab4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Register";
+        echo "Inscription";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -105,7 +105,7 @@ class __TwigTemplate_5e5924a7380e5a878c5b7da8cb574298bb7bf14eb530e1db566b0d77ab4
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 13
         echo "
-            <h3 class=\"mb-3 font-weight-normal\">Register</h3>
+            <h3 class=\"mb-3 font-weight-normal\">Inscription</h3>
 
             ";
         // line 16
@@ -127,23 +127,23 @@ class __TwigTemplate_5e5924a7380e5a878c5b7da8cb574298bb7bf14eb530e1db566b0d77ab4
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 23, $this->source); })()), "agreeTerms", [], "any", false, false, false, 23), 'row');
         echo "
             <div class=\"col-6\">
-                ";
-        // line 25
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 25, $this->source); })()), 'form_end');
-        echo "
             </div>
 
             <div class=\"row\">
                 <div class=\"col-6 p-3 my-auto\">
-                    <button type=\"submit\" class=\"btn btn-lg btn-primary\">Register</button>
+                    <button type=\"submit\" class=\"btn btn-lg btn-primary\">S'inscrire</button>
                 </div>
+            ";
+        // line 31
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 31, $this->source); })()), 'form_end');
+        echo "
 
                 <div class=\"col-6 p-3 my-auto\">
                     Déjà inscrit ?  
                     <a class=\"btn btn-lg btn-info\" href=\"";
         // line 35
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-        echo "\">Sign in</a>
+        echo "\">Se connecter</a>
                 </div>
             </div>
 
@@ -171,14 +171,14 @@ class __TwigTemplate_5e5924a7380e5a878c5b7da8cb574298bb7bf14eb530e1db566b0d77ab4
 
     public function getDebugInfo()
     {
-        return array (  145 => 35,  132 => 25,  127 => 23,  123 => 21,  121 => 19,  117 => 18,  112 => 16,  107 => 13,  98 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  145 => 35,  138 => 31,  127 => 23,  123 => 21,  121 => 19,  117 => 18,  112 => 16,  107 => 13,  98 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Inscription{% endblock %}
 
 {% block body %}
 <div class=\"w3-container w3-content\">
@@ -189,7 +189,7 @@ class __TwigTemplate_5e5924a7380e5a878c5b7da8cb574298bb7bf14eb530e1db566b0d77ab4
             <div class=\"alert alert-danger\" role=\"alert\">{{ flashError }}</div>
             {% endfor %}
 
-            <h3 class=\"mb-3 font-weight-normal\">Register</h3>
+            <h3 class=\"mb-3 font-weight-normal\">Inscription</h3>
 
             {{ form_start(registrationForm) }}
 
@@ -200,17 +200,17 @@ class __TwigTemplate_5e5924a7380e5a878c5b7da8cb574298bb7bf14eb530e1db566b0d77ab4
 
                 {{ form_row(registrationForm.agreeTerms) }}
             <div class=\"col-6\">
-                {{ form_end(registrationForm) }}
             </div>
 
             <div class=\"row\">
                 <div class=\"col-6 p-3 my-auto\">
-                    <button type=\"submit\" class=\"btn btn-lg btn-primary\">Register</button>
+                    <button type=\"submit\" class=\"btn btn-lg btn-primary\">S'inscrire</button>
                 </div>
+            {{ form_end(registrationForm) }}
 
                 <div class=\"col-6 p-3 my-auto\">
                     Déjà inscrit ?  
-                    <a class=\"btn btn-lg btn-info\" href=\"{{ path('app_login') }}\">Sign in</a>
+                    <a class=\"btn btn-lg btn-info\" href=\"{{ path('app_login') }}\">Se connecter</a>
                 </div>
             </div>
 

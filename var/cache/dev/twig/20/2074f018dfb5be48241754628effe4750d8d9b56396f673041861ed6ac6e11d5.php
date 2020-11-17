@@ -127,7 +127,7 @@ class __TwigTemplate_8772473c1fc5dd7292d685dd34ef82b7383ef93d531d607edb7f0e6b155
 
                 <div class=\"row\">
                     <div class=\"col-6 p-3 my-auto\">
-                        <button type=\"submit\" class=\"btn btn-lg btn-primary\">Sign in</button>
+                        <button type=\"submit\" class=\"btn btn-lg btn-primary\">Se connecter</button>
                     </div>
 
                     <div class=\"col-6 p-3 my-auto\">
@@ -135,7 +135,7 @@ class __TwigTemplate_8772473c1fc5dd7292d685dd34ef82b7383ef93d531d607edb7f0e6b155
                         <a class=\"btn btn-lg btn-info\" href=\"";
         // line 40
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
-        echo "\">Register</a>
+        echo "\">Inscription</a>
                     </div>
                 </div>
 
@@ -204,12 +204,12 @@ class __TwigTemplate_8772473c1fc5dd7292d685dd34ef82b7383ef93d531d607edb7f0e6b155
 
                 <div class=\"row\">
                     <div class=\"col-6 p-3 my-auto\">
-                        <button type=\"submit\" class=\"btn btn-lg btn-primary\">Sign in</button>
+                        <button type=\"submit\" class=\"btn btn-lg btn-primary\">Se connecter</button>
                     </div>
 
                     <div class=\"col-6 p-3 my-auto\">
                         Pas inscrit ?  
-                        <a class=\"btn btn-lg btn-info\" href=\"{{ path('app_register') }}\">Register</a>
+                        <a class=\"btn btn-lg btn-info\" href=\"{{ path('app_register') }}\">Inscription</a>
                     </div>
                 </div>
 

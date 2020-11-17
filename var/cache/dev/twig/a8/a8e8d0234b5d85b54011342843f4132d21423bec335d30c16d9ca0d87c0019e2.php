@@ -88,7 +88,7 @@ class __TwigTemplate_ea69e4c789e52a128ff9a053ba8197b53c118a76fef7b1f4dcef7519c0c
         echo "<div class=\"container-fluid\">
 
     <div clas=\"row p-5 bg-light\">
-            <div class=\"col-12 text-center\">
+            <div class=\"col text-center\">
             <a href=\"";
         // line 10
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
@@ -110,7 +110,8 @@ class __TwigTemplate_ea69e4c789e52a128ff9a053ba8197b53c118a76fef7b1f4dcef7519c0c
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formulaireDeContact"]) || array_key_exists("formulaireDeContact", $context) ? $context["formulaireDeContact"] : (function () { throw new RuntimeError('Variable "formulaireDeContact" does not exist.', 18, $this->source); })()), 'form_end');
         echo "
             </div>
-            <div class=\"col-12 text-center\">
+        </div>
+        <div class=\"col-12 text-center\">
             <h1>Appelez-nous</h1>
                 <h2 class=\"fas fa-phone-volume\"> (+33) 000 0000 000</h2>
         </div>
@@ -118,6 +119,7 @@ class __TwigTemplate_ea69e4c789e52a128ff9a053ba8197b53c118a76fef7b1f4dcef7519c0c
         <div class=\"col-12 text-center\">
           <h2>Service clientèle disponible 7j/7
           24h/24</h2>
+        </div>
 
 
 ";
@@ -154,7 +156,7 @@ class __TwigTemplate_ea69e4c789e52a128ff9a053ba8197b53c118a76fef7b1f4dcef7519c0c
 <div class=\"container-fluid\">
 
     <div clas=\"row p-5 bg-light\">
-            <div class=\"col-12 text-center\">
+            <div class=\"col text-center\">
             <a href=\"{{ path('contact') }}\"><img src=\"{{ asset('img/icons8-support-en-ligne-100.png') }}\" 
                     class=\"w3-image w3-hover-opacity\">
             <h4>Contactez-nous</h4>
@@ -165,7 +167,8 @@ class __TwigTemplate_ea69e4c789e52a128ff9a053ba8197b53c118a76fef7b1f4dcef7519c0c
                 {{ form_start(formulaireDeContact) }}
                 {{ form_end(formulaireDeContact) }}
             </div>
-            <div class=\"col-12 text-center\">
+        </div>
+        <div class=\"col-12 text-center\">
             <h1>Appelez-nous</h1>
                 <h2 class=\"fas fa-phone-volume\"> (+33) 000 0000 000</h2>
         </div>
@@ -173,6 +176,7 @@ class __TwigTemplate_ea69e4c789e52a128ff9a053ba8197b53c118a76fef7b1f4dcef7519c0c
         <div class=\"col-12 text-center\">
           <h2>Service clientèle disponible 7j/7
           24h/24</h2>
+        </div>
 
 
 {% endblock %}

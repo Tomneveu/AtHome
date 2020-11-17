@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}At Home!{% endblock %}
+
+{% block body %}
+<div class="w3-auto w3-center w3-content">
+
+    <div class="row">
+        <div class="col">
+            <a href="javascript:history.back()" class="btn btn-info">Retour</a>
+        </div>
+
+        <div class="col">
+            <h4>Coiffure</h4>
+            <img src="{{ asset('img/icons8-coiffure-100.png') }}" class="w3-image w3-hover-opacity">
+            <!--PRESTA LIST-->
+            <ul class="list-group">
+                {% for presta in service3 %}
+                <li class="list-group-item">{{ presta.name }}, {{ presta.prix }} € | {{ presta.description }}
+                <a href="{{ path('search_show', {'id': presta.id}) }}" class="btn btn-primary float-right">Voir</a>
+                </li>
+                {% endfor %}
+            </ul>
+            <!--END PRESTA LIST-->
+        </div>
+
+        <div class="col">
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

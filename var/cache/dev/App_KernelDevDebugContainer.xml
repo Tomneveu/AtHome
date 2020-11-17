@@ -87,12 +87,6 @@
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">App_KernelDevDebugContainer</parameter>
-    <parameter key="app.locales" type="collection">
-      <parameter>fr</parameter>
-      <parameter>en</parameter>
-      <parameter>de</parameter>
-      <parameter>nl</parameter>
-    </parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -237,6 +231,7 @@
     <parameter key="security.role_hierarchy.roles" type="collection">
       <parameter key="ROLE_ADMIN" type="collection">
         <parameter>ROLE_USER</parameter>
+        <parameter>ROLE_PRO</parameter>
       </parameter>
     </parameter>
     <parameter key="security.access.denied_url">null</parameter>
@@ -405,13 +400,6 @@
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.g9CqTPp.App\Controller\HomeController"/>
-      </call>
-    </service>
-    <service id="App\Controller\LangueController" class="App\Controller\LangueController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.g9CqTPp.App\Controller\LangueController"/>
       </call>
     </service>
     <service id="App\Controller\PrestationsController" class="App\Controller\PrestationsController" public="true" autowire="true" autoconfigure="true">
@@ -3416,15 +3404,6 @@
       <call method="addRuntimeLoader">
         <argument type="service" id="twig.runtime_loader"/>
       </call>
-      <call method="addGlobal">
-        <argument>locales</argument>
-        <argument type="collection">
-          <argument>fr</argument>
-          <argument>en</argument>
-          <argument>de</argument>
-          <argument>nl</argument>
-        </argument>
-      </call>
       <call method="registerUndefinedFilterCallback">
         <argument type="collection">
           <argument type="service" id="twig.missing_extension_suggestor"/>
@@ -5698,9 +5677,6 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\LangueController" class="App\Controller\LangueController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\LangueController" class="App\Controller\LangueController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\LangueController" class="App\Controller\LangueController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PrestationsController" class="App\Controller\PrestationsController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PrestationsController" class="App\Controller\PrestationsController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\PrestationsController" class="App\Controller\PrestationsController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6112,7 +6088,7 @@
         <argument key="passwordEncoder" type="service" id="security.user_password_encoder.generic"/>
       </argument>
     </service>
-    <service id=".service_locator.BHurZ.s" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.1Rc2y5G" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminUsersController::createUser" type="service" id=".service_locator.j5_bHjD"/>
@@ -6120,11 +6096,11 @@
         <argument key="App\Controller\AdminUsersController::index" type="service" id=".service_locator.FXD6KYr"/>
         <argument key="App\Controller\AdminUsersController::updateUser" type="service" id=".service_locator.YWClx0k"/>
         <argument key="App\Controller\ContactController::index" type="service" id=".service_locator.g8Ohtqp"/>
-        <argument key="App\Controller\HomeController::coiffure" type="service" id=".service_locator.fuQ02w4"/>
-        <argument key="App\Controller\HomeController::esthétique" type="service" id=".service_locator.fuQ02w4"/>
         <argument key="App\Controller\HomeController::index" type="service" id=".service_locator.etsIbWG"/>
         <argument key="App\Controller\HomeController::prestaShow" type="service" id=".service_locator.Zn6tQVw"/>
-        <argument key="App\Controller\HomeController::soins" type="service" id=".service_locator.fuQ02w4"/>
+        <argument key="App\Controller\HomeController::service1" type="service" id=".service_locator.fuQ02w4"/>
+        <argument key="App\Controller\HomeController::service2" type="service" id=".service_locator.fuQ02w4"/>
+        <argument key="App\Controller\HomeController::service3" type="service" id=".service_locator.fuQ02w4"/>
         <argument key="App\Controller\PrestationsController::delete" type="service" id=".service_locator.Zn6tQVw"/>
         <argument key="App\Controller\PrestationsController::edit" type="service" id=".service_locator.Zn6tQVw"/>
         <argument key="App\Controller\PrestationsController::show" type="service" id=".service_locator.Zn6tQVw"/>
@@ -6142,11 +6118,11 @@
         <argument key="App\Controller\AdminUsersController:index" type="service" id=".service_locator.FXD6KYr"/>
         <argument key="App\Controller\AdminUsersController:updateUser" type="service" id=".service_locator.YWClx0k"/>
         <argument key="App\Controller\ContactController:index" type="service" id=".service_locator.g8Ohtqp"/>
-        <argument key="App\Controller\HomeController:coiffure" type="service" id=".service_locator.fuQ02w4"/>
-        <argument key="App\Controller\HomeController:esthétique" type="service" id=".service_locator.fuQ02w4"/>
         <argument key="App\Controller\HomeController:index" type="service" id=".service_locator.etsIbWG"/>
         <argument key="App\Controller\HomeController:prestaShow" type="service" id=".service_locator.Zn6tQVw"/>
-        <argument key="App\Controller\HomeController:soins" type="service" id=".service_locator.fuQ02w4"/>
+        <argument key="App\Controller\HomeController:service1" type="service" id=".service_locator.fuQ02w4"/>
+        <argument key="App\Controller\HomeController:service2" type="service" id=".service_locator.fuQ02w4"/>
+        <argument key="App\Controller\HomeController:service3" type="service" id=".service_locator.fuQ02w4"/>
         <argument key="App\Controller\PrestationsController:delete" type="service" id=".service_locator.Zn6tQVw"/>
         <argument key="App\Controller\PrestationsController:edit" type="service" id=".service_locator.Zn6tQVw"/>
         <argument key="App\Controller\PrestationsController:show" type="service" id=".service_locator.Zn6tQVw"/>
@@ -6494,12 +6470,6 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.g9CqTPp" method="withContext"/>
     </service>
-    <service id=".service_locator.g9CqTPp.App\Controller\LangueController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator_context" id="App\Controller\LangueController"/>
-      <argument>App\Controller\LangueController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.g9CqTPp" method="withContext"/>
-    </service>
     <service id=".service_locator.g9CqTPp.App\Controller\PrestationsController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\PrestationsController"/>
       <argument>App\Controller\PrestationsController</argument>
@@ -6690,12 +6660,12 @@
       <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Provider\AdminContextProvider"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.BHurZ.s"/>
+      <argument type="service" id=".service_locator.1Rc2y5G"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.BHurZ.s"/>
+      <argument type="service" id=".service_locator.1Rc2y5G"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -7120,7 +7090,7 @@
     <service id="Swift_Transport" alias="swiftmailer.mailer.default.transport.spool" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.WaGDpDt" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.BHurZ.s"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.1Rc2y5G"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

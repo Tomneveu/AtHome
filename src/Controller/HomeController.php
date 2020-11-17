@@ -22,57 +22,55 @@ class HomeController extends AbstractController
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        $soins = $prestationsRepository->findByName('soins');
-        $esthétique = $prestationsRepository->findByName('esthétique');
-        $coiffure = $prestationsRepository->findByName('coiffure');
-        $réseaux = $prestationsRepository->findByName('réseaux');
+        $soins = $prestationsRepository->findByName('service1');
+        $esthétique = $prestationsRepository->findByName('service2');
+        $coiffure = $prestationsRepository->findByName('service3');
+        
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
-            'soins' => $soins,
-            'esthétique' => $esthétique,
-            'coiffure' => $coiffure,
-            'réseaux' => $réseaux,
-            
+            'service1' => $soins,
+            'service2' => $esthétique,
+            'service3' => $coiffure, 
         ]);
     }
 
     /**
-     * @Route("/soins", name="soins")
+     * @Route("/service1", name="service1")
      */
-    public function soins(PrestationsRepository $prestationsRepository): Response
+    public function service1(PrestationsRepository $prestationsRepository): Response
     {
-        $soins = $prestationsRepository->findByName('soins');
+        $service1 = $prestationsRepository->findByName('service1');
 
-        return $this->render('home/soins.html.twig', [
+        return $this->render('home/service1.html.twig', [
             'controller_name' => 'HomeController',
-            'soins' => $soins,
+            'service1' => $service1,
         ]);
     }
 
     /**
-     * @Route("/esthétique", name="esthétique")
+     * @Route("/service2", name="service2")
      */
-    public function esthétique(PrestationsRepository $prestationsRepository): Response
+    public function service2(PrestationsRepository $prestationsRepository): Response
     {
-        $esthétique = $prestationsRepository->findByName('esthétique');
+        $service2 = $prestationsRepository->findByName('service2');
 
-        return $this->render('home/esthétique.html.twig', [
+        return $this->render('home/service2.html.twig', [
             'controller_name' => 'HomeController',
-            'esthétique' => $esthétique,
+            'service2' => $service2,
         ]);
     }
 
     /**
-     * @Route("/coiffure", name="coiffure")
+     * @Route("/service3", name="service3")
      */
-    public function coiffure(PrestationsRepository $prestationsRepository): Response
+    public function service3(PrestationsRepository $prestationsRepository): Response
     {
-        $coiffure = $prestationsRepository->findByName('coiffure');
+        $service3 = $prestationsRepository->findByName('service3');
 
-        return $this->render('home/coiffure.html.twig', [
+        return $this->render('home/service3.html.twig', [
             'controller_name' => 'HomeController',
-            'coiffure' => $coiffure,
+            'service3' => $service3,
         ]);
     }
 

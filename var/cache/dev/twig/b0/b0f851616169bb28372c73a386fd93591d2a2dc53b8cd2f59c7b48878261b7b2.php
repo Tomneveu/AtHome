@@ -85,14 +85,14 @@ class __TwigTemplate_f6073bcaee96eaaded67e61eab641b782dbe10863512beb9e984f4d4399
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<div class=\"w3-auto w3-center w3-khaki\">
+        echo "<div class=\"w3-container w3-center w3-content\">
 
     <div class=\"row\">
         <div class=\"col\">
             <h4>Soins</h4>
             <a href=\"";
         // line 11
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("soins");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("service1");
         echo "\"><img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/icons8-massage-80.png"), "html", null, true);
         echo "\" class=\"w3-image w3-hover-opacity\"></a>
@@ -102,7 +102,7 @@ class __TwigTemplate_f6073bcaee96eaaded67e61eab641b782dbe10863512beb9e984f4d4399
             <h4>Esthétique</h4>
             <a href=\"";
         // line 16
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("esthétique");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("service2");
         echo "\"><img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/icons8-esthetique-100.png"), "html", null, true);
         echo "\" class=\"w3-image w3-hover-opacity\"></a>
@@ -112,7 +112,7 @@ class __TwigTemplate_f6073bcaee96eaaded67e61eab641b782dbe10863512beb9e984f4d4399
             <h4>Coiffure</h4>
             <a href=\"";
         // line 21
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("coiffure");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("service3");
         echo "\"><img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/icons8-coiffure-100.png"), "html", null, true);
         echo "\" class=\"w3-image w3-hover-opacity\"></a>
@@ -183,22 +183,22 @@ class __TwigTemplate_f6073bcaee96eaaded67e61eab641b782dbe10863512beb9e984f4d4399
 {% block title %}At Home!{% endblock %}
 
 {% block body %}
-<div class=\"w3-auto w3-center w3-khaki\">
+<div class=\"w3-container w3-center w3-content\">
 
     <div class=\"row\">
         <div class=\"col\">
             <h4>Soins</h4>
-            <a href=\"{{ path('soins') }}\"><img src=\"{{ asset('img/icons8-massage-80.png') }}\" class=\"w3-image w3-hover-opacity\"></a>
+            <a href=\"{{ path('service1') }}\"><img src=\"{{ asset('img/icons8-massage-80.png') }}\" class=\"w3-image w3-hover-opacity\"></a>
 
         </div>
         <div class=\"col\">
             <h4>Esthétique</h4>
-            <a href=\"{{ path('esthétique') }}\"><img src=\"{{ asset('img/icons8-esthetique-100.png') }}\" class=\"w3-image w3-hover-opacity\"></a>
+            <a href=\"{{ path('service2') }}\"><img src=\"{{ asset('img/icons8-esthetique-100.png') }}\" class=\"w3-image w3-hover-opacity\"></a>
 
         </div>
         <div class=\"col\">
             <h4>Coiffure</h4>
-            <a href=\"{{ path('coiffure') }}\"><img src=\"{{ asset('img/icons8-coiffure-100.png') }}\" class=\"w3-image w3-hover-opacity\"></a>
+            <a href=\"{{ path('service3') }}\"><img src=\"{{ asset('img/icons8-coiffure-100.png') }}\" class=\"w3-image w3-hover-opacity\"></a>
 
         </div>
     </div>

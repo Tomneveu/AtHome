@@ -93,59 +93,52 @@ class __TwigTemplate_61024500577356416e4e0e74d92e634e6acd007d01df27be067112af359
             <table class=\"table table-bordered table-sm text-center\">
                 <tbody>
                     <tr>
-                        <th>Id</th>
+                        <th>Catégorie</th>
                         <td>";
         // line 15
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["prestation"]) || array_key_exists("prestation", $context) ? $context["prestation"] : (function () { throw new RuntimeError('Variable "prestation" does not exist.', 15, $this->source); })()), "id", [], "any", false, false, false, 15), "html", null, true);
-        echo "</td>
-                    </tr>
-                    <tr>
-                        <th>Name</th>
-                        <td>";
-        // line 19
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["prestation"]) || array_key_exists("prestation", $context) ? $context["prestation"] : (function () { throw new RuntimeError('Variable "prestation" does not exist.', 19, $this->source); })()), "name", [], "any", false, false, false, 19), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["prestation"]) || array_key_exists("prestation", $context) ? $context["prestation"] : (function () { throw new RuntimeError('Variable "prestation" does not exist.', 15, $this->source); })()), "name", [], "any", false, false, false, 15), "html", null, true);
         echo "</td>
                     </tr>
                     <tr>
                         <th>Description</th>
                         <td>";
-        // line 23
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["prestation"]) || array_key_exists("prestation", $context) ? $context["prestation"] : (function () { throw new RuntimeError('Variable "prestation" does not exist.', 23, $this->source); })()), "description", [], "any", false, false, false, 23), "html", null, true);
+        // line 19
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["prestation"]) || array_key_exists("prestation", $context) ? $context["prestation"] : (function () { throw new RuntimeError('Variable "prestation" does not exist.', 19, $this->source); })()), "description", [], "any", false, false, false, 19), "html", null, true);
         echo "</td>
                     </tr>
                     <tr>
                         <th>Prix</th>
                         <td>";
-        // line 27
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["prestation"]) || array_key_exists("prestation", $context) ? $context["prestation"] : (function () { throw new RuntimeError('Variable "prestation" does not exist.', 27, $this->source); })()), "prix", [], "any", false, false, false, 27), "html", null, true);
-        echo " €</td>
+        // line 23
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["prestation"]) || array_key_exists("prestation", $context) ? $context["prestation"] : (function () { throw new RuntimeError('Variable "prestation" does not exist.', 23, $this->source); })()), "prix", [], "any", false, false, false, 23), "html", null, true);
+        echo "</td>
                     </tr>
                     <tr>
                         <th>Prestataire</th>
                         <td>";
-        // line 31
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["prestation"]) || array_key_exists("prestation", $context) ? $context["prestation"] : (function () { throw new RuntimeError('Variable "prestation" does not exist.', 31, $this->source); })()), "prestataire", [], "any", false, false, false, 31), "username", [], "any", false, false, false, 31), "html", null, true);
-        echo "</td>
+        // line 27
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["prestation"]) || array_key_exists("prestation", $context) ? $context["prestation"] : (function () { throw new RuntimeError('Variable "prestation" does not exist.', 27, $this->source); })()), "prestataire", [], "any", false, false, false, 27), "username", [], "any", false, false, false, 27), "html", null, true);
+        echo " €</td>
                     </tr>
                 </tbody>
             </table>
             <a href=\"javascript:history.back()\" class=\"btn btn-info\">Retour</a>
 
             ";
-        // line 37
+        // line 33
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_PRO")) {
-            // line 38
+            // line 34
             echo "            <a href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("prestations_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["prestation"]) || array_key_exists("prestation", $context) ? $context["prestation"] : (function () { throw new RuntimeError('Variable "prestation" does not exist.', 38, $this->source); })()), "id", [], "any", false, false, false, 38)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("prestations_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["prestation"]) || array_key_exists("prestation", $context) ? $context["prestation"] : (function () { throw new RuntimeError('Variable "prestation" does not exist.', 34, $this->source); })()), "id", [], "any", false, false, false, 34)]), "html", null, true);
             echo "\" class=\"btn btn-warning float-right\">Edit</a>
 
             ";
-            // line 40
+            // line 36
             echo twig_include($this->env, $context, "prestations/_delete_form.html.twig");
             echo "
             ";
         }
-        // line 42
+        // line 38
         echo "
         </div>
 
@@ -171,7 +164,7 @@ class __TwigTemplate_61024500577356416e4e0e74d92e634e6acd007d01df27be067112af359
 
     public function getDebugInfo()
     {
-        return array (  149 => 42,  144 => 40,  138 => 38,  136 => 37,  127 => 31,  120 => 27,  113 => 23,  106 => 19,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  142 => 38,  137 => 36,  131 => 34,  129 => 33,  120 => 27,  113 => 23,  106 => 19,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -189,24 +182,20 @@ class __TwigTemplate_61024500577356416e4e0e74d92e634e6acd007d01df27be067112af359
             <table class=\"table table-bordered table-sm text-center\">
                 <tbody>
                     <tr>
-                        <th>Id</th>
-                        <td>{{ prestation.id }}</td>
-                    </tr>
-                    <tr>
-                        <th>Name</th>
+                        <th>Catégorie</th>
                         <td>{{ prestation.name }}</td>
                     </tr>
                     <tr>
                         <th>Description</th>
-                        <td>{{ prestation.description }}</td>
+                        <td>{{ prestation.description}}</td>
                     </tr>
                     <tr>
                         <th>Prix</th>
-                        <td>{{ prestation.prix }} €</td>
+                        <td>{{ prestation.prix }}</td>
                     </tr>
                     <tr>
                         <th>Prestataire</th>
-                        <td>{{ prestation.prestataire.username }}</td>
+                        <td>{{ prestation.prestataire.username}} €</td>
                     </tr>
                 </tbody>
             </table>

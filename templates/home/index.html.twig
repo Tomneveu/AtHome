@@ -3,22 +3,22 @@
 {% block title %}At Home!{% endblock %}
 
 {% block body %}
-<div class="w3-auto w3-center w3-khaki">
+<div class="w3-container w3-center w3-content">
 
     <div class="row">
         <div class="col">
             <h4>Soins</h4>
-            <a href="{{ path('soins') }}"><img src="{{ asset('img/icons8-massage-80.png') }}" class="w3-image w3-hover-opacity"></a>
+            <a href="{{ path('service1') }}"><img src="{{ asset('img/icons8-massage-80.png') }}" class="w3-image w3-hover-opacity"></a>
 
         </div>
         <div class="col">
             <h4>Esthétique</h4>
-            <a href="{{ path('esthétique') }}"><img src="{{ asset('img/icons8-esthetique-100.png') }}" class="w3-image w3-hover-opacity"></a>
+            <a href="{{ path('service2') }}"><img src="{{ asset('img/icons8-esthetique-100.png') }}" class="w3-image w3-hover-opacity"></a>
 
         </div>
         <div class="col">
             <h4>Coiffure</h4>
-            <a href="{{ path('coiffure') }}"><img src="{{ asset('img/icons8-coiffure-100.png') }}" class="w3-image w3-hover-opacity"></a>
+            <a href="{{ path('service3') }}"><img src="{{ asset('img/icons8-coiffure-100.png') }}" class="w3-image w3-hover-opacity"></a>
 
         </div>
     </div>
