@@ -22,15 +22,19 @@ class HomeController extends AbstractController
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        $service1 = $prestationsRepository->findByName('service1');
-        $service2 = $prestationsRepository->findByName('service2');
-        $service3 = $prestationsRepository->findByName('service3');
-
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
-            'service1' => $service1,
-            'service2' => $service2,
-            'service3' => $service3,
+        ]);
+    }
+
+    /**
+     * @Route("/services", name="services")
+     */
+    public function services(PrestationsRepository $prestationsRepository): Response
+    {
+
+        return $this->render('home/services.html.twig', [
+            'controller_name' => 'HomeController',
         ]);
     }
 
@@ -39,7 +43,7 @@ class HomeController extends AbstractController
      */
     public function service1(PrestationsRepository $prestationsRepository): Response
     {
-        $service1 = $prestationsRepository->findByName('service1');
+        $service1 = $prestationsRepository->findByName('soins');
 
         return $this->render('home/service1.html.twig', [
             'controller_name' => 'HomeController',
@@ -52,7 +56,7 @@ class HomeController extends AbstractController
      */
     public function service2(PrestationsRepository $prestationsRepository): Response
     {
-        $service2 = $prestationsRepository->findByName('service2');
+        $service2 = $prestationsRepository->findByName('esthetique');
 
         return $this->render('home/service2.html.twig', [
             'controller_name' => 'HomeController',
@@ -65,7 +69,7 @@ class HomeController extends AbstractController
      */
     public function service3(PrestationsRepository $prestationsRepository): Response
     {
-        $service3 = $prestationsRepository->findByName('service3');
+        $service3 = $prestationsRepository->findByName('coiffure');
 
         return $this->render('home/service3.html.twig', [
             'controller_name' => 'HomeController',

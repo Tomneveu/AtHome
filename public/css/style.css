@@ -1,46 +1,87 @@
 /* **************************************** RESET **************************************** */
 *{
-    margin: 0;
-    padding: 0;
     text-decoration: none;
     list-style-type: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Georgia, 'Times New Roman', Times, serif, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans MT', Georgia, 'Times New Roman', Times, serif, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
+    font-size: 2vh;
 }
 
-html {
+html, body {
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
+    margin-top: 4vh;
+    margin-bottom: 5vh;
+    background-color: #f5d800;
 }
 
-/* **************************************** BASE - FOOTER **************************************** */
-footer {
-    margin-top: 100px;
-	width: 100%;
-	color: black;
-	text-align: center;
+/* **************************************** BASE - NAVBAR **************************************** */
+.w3-bar {
+    background-color: #f5d800;
+    margin: auto;
 }
 
-/* **************************************** HOME - HEADER **************************************** */
 a:hover{
     text-decoration: none;
 }
 
-body {
-    height: 100%;
-    background-color: #ffd600;
+.avatar {
+    vertical-align: middle;
+    max-width: 70px;
+    max-height: 70px;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    float: right;
 }
 
-body,h1,h2,h3,h4,h5,h6 {
-    font-family: "Raleway", Arial, Helvetica, sans-serif;
-}
-
+/* **************************************** HOME - INDEX **************************************** */
 .row {
-    padding: 2vh;
-    margin-top: 10vh;
+    padding: 1%;
+    margin-top: 1vh;
 }
 
-.list-group-item{
-    background-color: #ffd50080;
+.container {
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    margin-top: 12vw;
+    margin-bottom: 10%;
+    background-image: url('../img/logo.png');
+        background-size: 30%;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+
+.w3-button {margin-left: 25px;}
+
+.w3-image {
+    width: 70%;
+    max-width: 100px;
+}
+.logo {
+    margin-top: 9%;
+    width: 180%;
+    max-width: 250px;
+}
+
+.fiche {
+    line-height: 13px;
+}
+.fiche h4 {
+    text-transform: uppercase;
+}
+.portrait {
+    max-width: 150px;
+    width: 100%;
+}
+
+/* **************************************** HOME - PAGE **************************************** */
+@media (max-width: 992px){
+    .w3-auto {
+        max-width: 90%;
+    }
 }
 
 .list-group{
@@ -48,7 +89,7 @@ body,h1,h2,h3,h4,h5,h6 {
 }
 
 .table {
-    background-color: #ffd50080;
+    background-color: white;
 }
 
 .selector-for-some-widget {
@@ -62,32 +103,23 @@ body,h1,h2,h3,h4,h5,h6 {
 #myBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
-    bottom: 70px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
+    bottom: 15px; /* Place the button at the bottom of the page */
+    right: 5px; /* Place the button 30px from the right */
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
     background-color: #A9A9A9; /* Set a background color */
-    opacity: 0.8;
+    opacity: 0.6;
     color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 12px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+    padding: 5px; /* Some padding */
+    border-radius: 12px; /* Rounded corners */
+    font-size: 28px; /* Increase font size */
 }
   
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
 }
-
-.btn {
-    color: white;
-}
-
-.btn:hover {
-    color: white;
-}
-
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -100,17 +132,18 @@ input[type=text], input[type=password] {
 }
 
 /* Set a style for all buttons */
-button {
+.btn {
     color: white;
-    padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: auto;
+    font-size: 90%;
 }
 
-button:hover {
+.btn:hover {
     opacity: 0.8;
+    background-color: #555;
 }
 
 span.psw {

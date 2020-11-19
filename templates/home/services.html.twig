@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}At Home!{% endblock %}
+
+{% block body %}
+<div class="w3-auto w3-center w3-content">
+    <div class="row">
+        <a href="javascript:history.back()"><i class="fa fa-close" style="font-size:36px"></i></a>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <p>Soins</p>
+            <a href="{{ path('service1') }}"><img src="{{ asset('img/icons8-massage-80.png') }}"
+                    class="w3-image w3-hover-opacity"></a>
+        </div>
+
+        <div class="col-4">
+            <p>Esthétique</p>
+            <a href="{{ path('service2') }}"><img src="{{ asset('img/icons8-lipstick-80.png') }}"
+                    class="w3-image w3-hover-opacity"></a>
+        </div>
+
+        <div class="col-4">
+            <p>Coiffure</p>
+            <a href="{{ path('service3') }}"><img src="{{ asset('img/icons8-barbershop-80.png') }}"
+                    class="w3-image w3-hover-opacity"></a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

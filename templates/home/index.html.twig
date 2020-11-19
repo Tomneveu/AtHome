@@ -3,39 +3,50 @@
 {% block title %}At Home!{% endblock %}
 
 {% block body %}
-<div class="w3-container w3-center w3-content">
+<div class="container w3-center">
 
-    <div class="row">
-        <div class="col">
-            <h4>Soins</h4>
-            <a href="{{ path('service1') }}"><img src="{{ asset('img/icons8-massage-80.png') }}" class="w3-image w3-hover-opacity"></a>
-
+    <div class="w3-row">
+        <div class="w3-col s4">
+            <p>Notifications</p>
+            <a href="#"><img src="{{ asset('img/icons8-massage-80.png') }}" class="w3-image w3-hover-opacity"></a>
         </div>
-        <div class="col">
-            <h4>Esthétique</h4>
-            <a href="{{ path('service2') }}"><img src="{{ asset('img/icons8-lipstick-80.png') }}" class="w3-image w3-hover-opacity"></a>
-
+        <div class="w3-col s4">
+            <p>Prestations</p>
+            <a href="{{ path('services') }}"><img src="{{ asset('img/icons8-lipstick-80.png') }}"
+                    class="w3-image w3-hover-opacity"></a>
         </div>
-        <div class="col">
-            <h4>Coiffure</h4>
-            <a href="{{ path('service3') }}"><img src="{{ asset('img/icons8-barbershop-80.png') }}" class="w3-image w3-hover-opacity"></a>
-
+        <div class="w3-col s4">
+            <p>Mon compte</p>
+            <a href="{{ path('profile') }}"><img src="{{ asset('img/icons8-customer-80.png') }}"
+                    class="w3-image w3-hover-opacity"></a>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col">
+    <div class="w3-row">
+        <div class="w3-col s4" style="margin-top: 8%;">
+            <a href="#"><img src="{{ asset('img/icons8-massage-80.png') }}" class="w3-image w3-hover-opacity"></a>
+            <p>Avis</p>
+        </div>
+        <div class="w3-col s4" style="margin-top: 30%;">
+        </div>
+        <div class="w3-col s4" style="margin-top: 8%;">
+            <a href="#"><img src="{{ asset('img/icons8-lipstick-80.png') }}" class="w3-image w3-hover-opacity"></a>
+            <p>Réseaux</p>
+        </div>
+    </div>
+
+    <div class="w3-row">
+        <div class="w3-col s4">
             <a href="{{ path('app_register') }}"><img src="{{ asset('img/icons8-customer-80.png') }}"
                     class="w3-image w3-hover-opacity"></a>
-            <h4>S'inscrire/Se connecter</h4>
+            <p>Identifications</p>
         </div>
-        <div class="col">
-            <img src="{{ asset('img/icons8-technical-support-80.png') }}" class="w3-image w3-hover-opacity">
-            <h4>Contactez-nous</h4>
+        <div class="w3-col s4" style="margin-top: 8%;">
         </div>
-        <div class="col">
-            <img src="{{ asset('img/icons8-maintenance-80.png') }}" class="w3-image w3-hover-opacity">
-            <h4>Support</h4>
+        <div class="w3-col s4">
+            <a href="#"><img src="{{ asset('img/icons8-technical-support-80.png') }}"
+                    class="w3-image w3-hover-opacity"></a>
+            <p>Contactez-nous</p>
         </div>
     </div>
 

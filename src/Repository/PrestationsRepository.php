@@ -41,7 +41,6 @@ class PrestationsRepository extends ServiceEntityRepository
             ->andWhere('p.prestataire = :val')
             ->setParameter('val', $prestataire)
             ->orderBy('p.id', 'ASC')
-            // ->setMaxResults(10)
             ->getQuery()
             ->getResult()
         ;

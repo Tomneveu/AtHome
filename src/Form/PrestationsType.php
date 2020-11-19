@@ -26,9 +26,9 @@ class PrestationsType extends AbstractType
                 'multiple' => false,
                 'expanded' => false,
                     'choices'  => [
-                        'service1' => 'service1',
-                        'service2' => 'service2',
-                        'service3' => 'service3',
+                        'Soins' => 'soins',
+                        'Esthétique' => 'esthetique',
+                        'Coiffure' => 'coiffure',
                 ],
             ])
             ->add('description', TextareaType::class)
