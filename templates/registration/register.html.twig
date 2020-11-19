@@ -11,29 +11,28 @@
             <div class="alert alert-danger" role="alert">{{ flashError }}</div>
             {% endfor %}
 
+            <a href="{{ path('home') }}"><i class="fa fa-close" style="font-size:36px"></i></a>
+
             <h3 class="mb-3 font-weight-normal">Inscription</h3>
 
             {{ form_start(registrationForm) }}
-
+                {{ form_row(registrationForm.Roles) }}
                 {{ form_row(registrationForm.first_name) }}
                 {{ form_row(registrationForm.last_name) }}
                 {{ form_row(registrationForm.email) }}
                 {{ form_row(registrationForm.address) }}
-                {{ form_row(registrationForm.plainPassword, {
-                    label: 'Password'
-                }) }}
-
+                {{ form_row(registrationForm.plainPassword) }}
                 {{ form_row(registrationForm.agreeTerms) }}
             <div class="col-6">
             </div>
             
             <div class="row">
-                <div class="col-6 p-3 my-auto">
+                <div class="col-4 p-2 my-auto">
                     <button type="submit" class="btn btn-lg btn-primary">S'inscrire</button>
                 </div>
             {{ form_end(registrationForm) }}
                 
-                <div class="col-6 p-3 my-auto">
+                <div class="col-4 p-2 my-auto ml-auto">
                     Déjà inscrit ?  
                     <a class="btn btn-lg btn-info" href="{{ path('app_login') }}">Se connecter</a>
                 </div>

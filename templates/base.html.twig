@@ -15,13 +15,13 @@
 </head>
 
 <!-- Navigation Bar -->
-<div class="w3-container w3-bar w3-top">
-    <a href="{{ path('home') }}" class="w3-bar-item w3-xlarge">
-        <b><i class="fa fa-map-marker w3-margin-right w3-xlarge"></i>AtHome</b>
+<div class="w3-container w3-bar">
+    <a href="{{ path('home') }}" class="w3-bar-item">
+        <b><i class="fa fa-map-marker w3-margin-right"></i>AtHome</b>
     </a>
-    <a href="{{ path('profile') }}" class="w3-bar-item w3-large w3-right">
+    <a href="{{ path('profile') }}" class="w3-bar-item w3-right">
         {% if app.user %}
-            {{ app.user.firstname }} {{ app.user.lastname }}
+        <b>{{ app.user.firstname }}</b>
         {% endif %}
     <img src="{{ asset('img/icons8-customer-40.png') }}" class="w3-hover-opacity"></a>
 </div>

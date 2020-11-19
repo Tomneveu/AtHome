@@ -5,11 +5,11 @@
 {% block body %}
 <div class="col-md-8 offset-sm-3 p-2">
 
+    <a href="javascript:history.back()"><i class="fa fa-arrow-left" style="font-size:36px"></i></a>
+
     <h2>Mes prestations</h2>
 
     {{ include('prestations/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="javascript:history.back()" class="btn btn-info">Retour</a>
 
     {{ include('prestations/_delete_form.html.twig') }}
 

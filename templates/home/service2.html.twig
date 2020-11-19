@@ -4,9 +4,7 @@
 
 {% block body %}
 <div class="w3-auto w3-content">
-    <div class="row">
-        <a href="javascript:history.back()"><i class="fa fa-close" style="font-size:36px"></i></a>
-    </div>
+        <a href="javascript:history.back()"><i class="fa fa-arrow-left" style="font-size:36px"></i></a>
 
     {% for presta in service2 %}
     <div class="row justify-content-md-center">
@@ -25,48 +23,6 @@
     </div><!-- FIN ROW -->
     {% endfor %}
 
-    <div class="row justify-content-md-center">
-        <div class="col-6">
-            <img src={{ asset ('img/brel_stage.jpg') }} alt="portrait" class="portrait" />
-        </div>
-        <div class="col-6">
-            <div class="fiche">
-                <h4>MASSAGE</h4>
-                <p>JOHN DOE</p>
-                <p>massage Thaïlandais</p>
-                <p><strong>35€</strong></p>
-                <p><button class="w3-button w3-green w3-round-xlarge">Recommande</button></p>
-            </div><!-- FIN FICHE -->
-        </div><!-- FIN COL -->
-    </div><!-- FIN ROW -->
-
-    <div class="row">
-        <div class="col-6">
-            <img src={{ asset ('img/brel_stage.jpg') }} alt="portrait" class="portrait" />
-        </div>
-        <div class="col-6">
-            <div class="fiche">
-                <h4>BEAUTÉ</h4>
-                <p>JOHN DOE</p>
-                <p>manucure et pédicure</p>
-                <p><strong>30€</strong><button class="w3-button w3-green w3-round-xlarge">Recommande</button></p>
-            </div><!-- FIN FICHE -->
-        </div><!-- FIN COL -->
-    </div><!-- FIN ROW -->
-
-    <div class="row">
-        <div class="col-6">
-            <img src={{ asset ('img/brel_stage.jpg') }} alt="portrait" class="portrait" />
-        </div>
-        <div class="col-6">
-            <div class="fiche">
-                <h4>COIFFEUR</h4>
-                <p>JOHN DOE</p>
-                <p>coiffure enfant</p>
-                <p><strong>30€</strong><button class="w3-button w3-green w3-round-xlarge">Recommande</button></p>
-            </div><!-- FIN FICHE -->
-        </div><!-- FIN COL -->
-    </div><!-- FIN ROW -->
 </div>
 
 </div><!-- FIN CONTAINER -->

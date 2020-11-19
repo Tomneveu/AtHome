@@ -12,30 +12,33 @@
                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
 
+                <a href="{{ path('home') }}"><i class="fa fa-close" style="font-size:36px"></i></a>
+
                 <h3 class="mb-3 font-weight-normal">Connectez-vous</h3>
                 <label for="inputEmail">Email</label>
                 <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control"
                     required autofocus>
                 <br>
-                <label for="inputPassword">Password</label>
+                <label for="inputPassword">Mot de passe</label>
                 <input type="password" name="password" id="inputPassword" class="form-control" required>
                 <!-- An element to toggle between password visibility -->
-                <input type="checkbox" onclick="showPSWD()" id="inputPassword"> Show Password
+                <input type="checkbox" onclick="showPSWD()" id="inputPassword"> Montrer le mot de passe
 
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
                 <div class="checkbox mb-3">
                     <label>
-                        <input type="checkbox" name="_remember_me"> Remember me
+                        <input type="checkbox" name="_remember_me"> Se souvenir de moi
                     </label>
+                    <span class="psw"><a href="#">Mot de passe oublié ?</a></span>
                 </div>
 
                 <div class="row">
-                    <div class="col-6 p-3 my-auto">
+                    <div class="col-4 p-2 my-auto">
                         <button type="submit" class="btn btn-lg btn-primary">Se connecter</button>
                     </div>
 
-                    <div class="col-6 p-3 my-auto">
+                    <div class="col-4 p-2 my-auto ml-auto">
                         Pas inscrit ?  
                         <a class="btn btn-lg btn-info" href="{{ path('app_register') }}">Inscription</a>
                     </div>

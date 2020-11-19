@@ -11,17 +11,12 @@ html, body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    margin-top: 4vh;
+    margin-top: 1vh;
     margin-bottom: 5vh;
     background-color: #f5d800;
 }
 
 /* **************************************** BASE - NAVBAR **************************************** */
-.w3-bar {
-    background-color: #f5d800;
-    margin: auto;
-}
-
 a:hover{
     text-decoration: none;
 }
@@ -39,26 +34,27 @@ a:hover{
 /* **************************************** HOME - INDEX **************************************** */
 .row {
     padding: 1%;
-    margin-top: 1vh;
+}
+.w3-col {
+    margin-top: 7%;
+    margin-bottom: 7%;
 }
 
 .container {
     height: 90%;
     width: 90%;
     margin: auto;
-    margin-top: 12vw;
     margin-bottom: 10%;
     background-image: url('../img/logo.png');
         background-size: 30%;
         background-position: center;
         background-repeat: no-repeat;
 }
-
 .w3-button {margin-left: 25px;}
 
 .w3-image {
     width: 70%;
-    max-width: 100px;
+    max-width: 80px;
 }
 .logo {
     margin-top: 9%;

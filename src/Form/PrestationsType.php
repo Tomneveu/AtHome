@@ -23,6 +23,7 @@ class PrestationsType extends AbstractType
             // ->add('name', TextType::class)
             ->add('name', ChoiceType::class, [
                 'required' => true,
+                'label' => 'Catégorie de la prestation',
                 'multiple' => false,
                 'expanded' => false,
                     'choices'  => [
@@ -34,6 +35,7 @@ class PrestationsType extends AbstractType
             ->add('description', TextareaType::class)
             ->add('prix', NumberType::class, [
                 'scale' => 2,
+                'label' => 'Prix en €',
                 ]
             )
             // ->add('prestataire', EntityType::class, [
