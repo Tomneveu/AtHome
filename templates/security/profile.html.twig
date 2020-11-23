@@ -32,10 +32,34 @@
         </table>
 
         {% if is_granted('ROLE_ADMIN') %}
-        <a href="{{ path('admin') }}" class="btn btn-primary">ADMIN</a>
+        <a href="{{ path('admin') }}" class="btn btn-primary">Voir tout les utilisateurs</a>
         {% endif %}
 
         <a href="{{ path('app_logout') }}" class="btn btn-info float-right">Se déconnecter</a>
+    </div>
+
+</div>
+<br>
+<div class="col-sm-10 offset-sm-1 p-1">
+
+    <h2>Liste de vos rendez-vous :</h2>
+
+    <div class="table-responsive-sm">
+        <table class="table table-bordered table-sm text-center">
+            <thead>
+                <tr>
+                    <th>Nom du client</th>
+                    <th>N° de la prestation</th>
+                    <th>Facture</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="5">no records found</td>
+                </tr>
+            </tbody>
+        </table>
+
     </div>
 
 </div>
@@ -52,6 +76,7 @@
                     <th>Catégorie</th>
                     <th>Description</th>
                     <th>Prix</th>
+                    <th>Notes et avis</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -61,8 +86,9 @@
                     <td>{{ prestation.name }}</td>
                     <td>{{ prestation.description }}</td>
                     <td>{{ prestation.prix }}€</td>
+                    <td>../5</td>
                     <td>
-                        <a href="{{ path('prestations_show', {'id': prestation.id}) }}" class="btn btn-primary"><i class='fas fa-plus'></i></a>
+                        <a href="{{ path('prestations_show', {'id': prestation.id}) }}" class="btn btn-primary"><i class='far fa-eye'></i></a>
                         <a href="{{ path('prestations_edit', {'id': prestation.id}) }}" class="btn btn-warning"><i class='fas fa-edit'></i></a>
                     </td>
                 </tr>

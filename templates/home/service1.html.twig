@@ -17,7 +17,9 @@
                 <p>{{ presta.prestataire.username }}</p>
                 <p>{{ presta.description }}</p>
                 <p><strong>{{ presta.prix }} €</strong></p>
-                <p><button class="w3-button w3-green w3-round-xlarge">Recommande</button></p>
+                <p>Notes: ../5</p>
+                <p><a href="{{ path('search_show', {'id': presta.id}) }}" class="btn btn-primary w3-round-large">Voir en détail</a>
+                <button class="btn btn-success w3-round-large">Recommandé</button></p>
             </div><!-- FIN FICHE -->
         </div><!-- FIN COL -->
     </div><!-- FIN ROW -->
